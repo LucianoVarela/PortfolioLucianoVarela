@@ -244,8 +244,8 @@ textarea {
 
 input[type=submit] {
     padding: 10px 30px;
-    font-size: 18px;
-    color: olive;
+    font-size: 20px;
+    color: lightgreen;
     cursor: pointer;
     background: lightgreen;
     border: 1px solid green;
