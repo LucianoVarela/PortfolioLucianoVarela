@@ -74,13 +74,14 @@ h5 {
     border-left: 2px solid green;
     border-right: 2px solid green;
     border-top: 1px solid green;
+    z-index: 1;
 }
 
 #nameArt {
     float: left;
     width: 250px;
     height: 90px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
     font-size: 30px;
     font-weight: 700;
     line-height: 90px;
@@ -139,6 +140,7 @@ nav a: first-child {
   background-color: lightgreen; 
   border: 5px solid green;
   border-radius: 10%;
+  z-index: 2;
 }
 
 
