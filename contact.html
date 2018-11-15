@@ -30,7 +30,10 @@ background-size: 100% 100%; background-attachment: fixed; ">
     <div id="main-container" class="containier">
         <section class="main-section">
             <h1>Contact</h1>
-            <form id="contact-form">
+            <? 
+if (!$HTTP_POST_VARS){ 
+?> 
+            <form id="contact-form" action="envia_form_php.php" method=post> >
                 <ul>
                     <li>
                         <label for="name">Name</label>
@@ -47,6 +50,21 @@ background-size: 100% 100%; background-attachment: fixed; ">
                 </ul>
                 <input type="submit">
             </form>
+            <? 
+}else{ 
+   
+   	$cuerpo = "Formulario enviado\n"; 
+   	$cuerpo .= "Name" . $HTTP_POST_VARS["name"] . "\n"; 
+   	$cuerpo .= "email" . $HTTP_POST_VARS["email"] . "\n"; 
+   	$cuerpo .= "Mesagge" . $HTTP_POST_VARS["message"] . "\n"; 
+
+   
+   	mail("machinesfromhell@gmail.com","Messege from the Web Page",$cuerpo); 
+
+   	
+   	echo "Thanks for sending."; 
+} 
+?>              
         </section>
 
         <section class="sidebar">
